@@ -101,12 +101,18 @@ window.onload = function () {
             exportContent();
         });
     }
-    setTimeout(()=>{
-        document.querySelector(".loading").style.opacity = "0";
+    if(window.innerHeight<window.innerWidth){
         setTimeout(()=>{
-            document.querySelector(".loading").style.display = "none";
-        },140)
-    },900)
+            document.querySelector(".loading").style.opacity = "0";
+            setTimeout(()=>{
+                document.querySelector(".loading").style.display = "none";
+            },140)
+        },900)
+    }else{
+        document.querySelector(".loader").style.display = "none";
+        document.querySelector(".loading img").style.display = "none";
+        document.querySelector(".loading span").textContent = "Not available for your device size"
+    }
 }
 window.setEditorValue = function(value) {
     const model = monaco.editor.getModels()[0];
