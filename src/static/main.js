@@ -47,7 +47,7 @@ function generateIdea () {
     setEditorValue("# Generating your script...")
     var prefix = "You are the coding agent in a website that generates PythonKara Code. Generate code for the following prompt: '";
     var suffix = "' Respond with the python script only, no need for `def main` or any imports. Kara-Commands: "+karaFunctions.map(f => f.insertText).join("; ");
-    fetch ("https://hakuna-matata.einfachniemmand-project.workers.dev/website/", {
+    fetch ("", {// Get your own endpoint :)
         method: 'POST',
         headers: {'Content-Type':'application/json'},
         body: JSON.stringify({
