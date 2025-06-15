@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>PythonKara Online</title>
+        <link rel="icon" href="media/icon.svg">
+        <link rel="stylesheet" href="static/global.css">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=500, initial-scale=1">
+        <script src="static/main.js"></script>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="content">
+            <div class="preview">
+                <iframe src="kara.html"></iframe>
+            </div>
+            <div class="dif-indc"></div>
+            <div class="editor">
+                <div class="tools">
+                    <div class="tool"><input placeholder="kara.py" class="file-name" type="text" value="kara.py" style="width: auto;" size="4" oninput="this.size = this.value.length > 6 ? this.value.length-3 : 4;" maxlength="32"></div>
+                    <div class="tool" onclick="downloadContent()">Download</div>
+                    <div class="tool" onclick="openGenerator()">Generative Model</div>
+                    <div class="tool" onclick="loadDocs()">Docs</div>
+                    <i class="fa-brands fa-github tool" onclick="window.open('https://github.com/einfachniemmand/pythonkara-ide')"></i>
+                </div>
+                <div id="textarea"></div>
+            </div>
+        </div>
+        <div class="documentation" onclick="if(event.target==this){closeDocs()}"><iframe src="docs/"></iframe></div>
+        <div class="generative-outer" onclick="if(event.target==this){closeGenerator()}">
+            <div class="generative-window">
+                <span>Generate Code</span><p>Generate PythonKara code automatically using AI</p>
+                <div class="bot-input">
+                    <input class="bot-input" id="bi" type="text" maxlength="128" placeholder="Program that kara spins forever!"></input>
+                    <label for="bi" onclick="generateIdea()"><i class="fa-solid fa-paper-plane"></i></label>
+                </div>
+                <b>Try again with another prompt</b>
+            </div>
+        </div>
+        <script src="https://unpkg.com/monaco-editor@latest/min/vs/loader.js"></script>
+        <script src="static/export.js"></script>
+        <script src="static/editor.js"></script>
+    </body>
+</html>
