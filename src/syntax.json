@@ -6,7 +6,7 @@
         "detail": "Step forwards"
     },
     {
-        "label": "kkara.turnLeft",
+        "label": "kara.turnLeft",
         "kind": "monaco.languages.CompletionItemKind.Function",
         "insertText": "kara.turnLeft()",
         "detail": "90deg rotation left"
