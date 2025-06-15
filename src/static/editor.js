@@ -29,7 +29,7 @@ require(['vs/editor/editor.main'], function () {
     monaco.languages.setMonarchTokensProvider('python', {
         tokenizer: {
             root: [
-                [/\b(kara|world|tools)(\.)/, [
+                [/\b(kara|world|tools)\b(\s*\.)/, [
                     { token: 'custom-object' },
                     { token: '', next: '@kara_method' }
                 ]],
@@ -53,8 +53,8 @@ require(['vs/editor/editor.main'], function () {
                 [/[a-zA-Z_]\w*/, 'identifier', '@pop']
             ],
             kara_paren: [
-                [/\(\)/, 'custom-method', '@pop'],
-                ['', '', '@pop']
+                [/\(\)/, 'custom-method', '@popall'],
+                ['', '', '@popall']
             ],
             whitespace: [
                 [/[ \t\r\n]+/, 'white'],
