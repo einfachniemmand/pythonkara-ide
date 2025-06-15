@@ -101,6 +101,12 @@ window.onload = function () {
             exportContent();
         });
     }
+    setTimeout(()=>{
+        document.querySelector(".loading").style.opacity = "0";
+        setTimeout(()=>{
+            document.querySelector(".loading").style.display = "none";
+        },140)
+    },900)
 }
 window.setEditorValue = function(value) {
     const model = monaco.editor.getModels()[0];

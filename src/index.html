@@ -10,6 +10,53 @@
         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     </head>
     <body>
+        <style>
+            .loading {
+                position: fixed;
+                z-index: 100;
+                width: 100vw;
+                height: 100vh;
+                background:#1e1e1e;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                transition: 150ms;
+                opacity: 1; 
+            }
+            .loading img {
+                border-radius: 15px;
+            }
+            .loading span {
+                color:rgb(100,100,100);
+                font-family: "Arial","Helvetica",sans-serif;
+                margin-top:25px;
+            }
+            .loader {
+                margin-top:50px;
+                width: 45px;
+                aspect-ratio: .75;
+                --c: no-repeat linear-gradient(rgb(150,150,150) 0 0);
+                background: 
+                    var(--c) 0%   50%,
+                    var(--c) 50%  50%,
+                    var(--c) 100% 50%;
+                animation: l7 1s infinite linear alternate;
+            }
+            @keyframes l7 {
+                0%  {background-size: 20% 50% ,20% 50% ,20% 50% }
+                20% {background-size: 20% 20% ,20% 50% ,20% 50% }
+                40% {background-size: 20% 100%,20% 20% ,20% 50% }
+                60% {background-size: 20% 50% ,20% 100%,20% 20% }
+                80% {background-size: 20% 50% ,20% 50% ,20% 100%}
+                100%{background-size: 20% 50% ,20% 50% ,20% 50% }
+            }
+        </style>
+        <div class="loading">
+            <img src="media/logo.png" draggable="false">
+            <span>Why do devs use dark mode? Cause light attracts Kara!</span>
+            <div class="loader"></div>
+        </div>
         <div class="content">
             <div class="preview">
                 <iframe src="kara.html"></iframe>
@@ -21,7 +68,7 @@
                     <div class="tool" onclick="downloadContent()">Download</div>
                     <div class="tool" onclick="openGenerator()">Generative Model</div>
                     <div class="tool" onclick="loadDocs()">Docs</div>
-                    <i class="fa-brands fa-github tool" onclick="window.open('https://github.com/einfachniemmand/pythonkara-ide')"></i>
+                    <i class="fa-brands fa-github tool" title="github/einfachniemmand" onclick="window.open('https://github.com/einfachniemmand/pythonkara-ide')"></i>
                 </div>
                 <div id="textarea"></div>
             </div>
