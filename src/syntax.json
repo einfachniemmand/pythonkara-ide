@@ -238,5 +238,17 @@
         "kind": "monaco.languages.CompletionItemKind.Keyword",
         "insertText": "# ",
         "detail": "Add a comment"
+    },
+    {
+        "label": "True",
+        "kind": "monaco.languages.CompletionItemKind.Keyword",
+        "insertText": "True",
+        "detail": ""
+    },
+    {
+        "label": "False",
+        "kind": "monaco.languages.CompletionItemKind.Keyword",
+        "insertText": "False",
+        "detail": ""
     }
 ]
