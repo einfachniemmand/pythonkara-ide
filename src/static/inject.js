@@ -7,5 +7,6 @@ function convertToWritable (input) {
     return output
 }
 setInterval(()=>{
-    document.querySelector(".cm-content").innerHTML = localStorage.getItem('pykara_script') ?  convertToWritable(localStorage.getItem('pykara_script')) : ""; 
+    document.querySelector(".cm-content").innerHTML = localStorage.getItem('pykara_script') ?  convertToWritable(localStorage.getItem('pykara_script')) : "";
+    document.querySelector("main > div:nth-child(1) > div:nth-child(1) > div:nth-child(3) > div:nth-child(1) > div:nth-child(1) > input:nth-child(2)").max = 10.5;
 },300)
