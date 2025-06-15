@@ -1,0 +1,248 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
+body > main:nth-child(1) > div:nth-child(1) > div:nth-child(2), body > main:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(7) {
+    display: none !important;
+}
+main {
+    display:flex !important;
+    color:white;
+    width: 100vw;
+    justify-content: center;
+}
+* {
+    font-family: "Lato",sans-serif;
+    user-select: none !important;
+    scrollbar-width: none;
+}
+.panel {
+    display:flex;
+    max-width: 100%;
+    justify-content: center;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    margin-bottom:15px;
+}
+rect {
+    fill: transparent !important;
+    color:transparent;
+}
+line {
+    stroke: white !important;
+}
+html body main div div div svg {
+    border-radius: 15px;
+    border: white 2px solid;
+    height: auto !important;
+    width: auto !important;
+    max-width: 45vh !important;
+}
+button.iconButton {
+    background: transparent;
+    border:none;
+    cursor: pointer;
+}
+button.iconButton:not(.svelte-6g2o4b) img, div.panel button.iconButton.svelte-6g2o4b:nth-child(5) img {
+    display: none;
+}
+button.iconButton:not(.svelte-6g2o4b)::after, div.panel button.iconButton.svelte-6g2o4b:nth-child(5)::after {
+    font-family: "Font Awesome 6 Free", "FontAwesome", "Font Awesome 5 Free", "FontAwesome5Free", "FontAwesome";
+    font-weight: 900;
+    color:white;
+    font-size: 25px;
+    aspect-ratio: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-bottom: 10px;
+    margin-top:5px;
+}
+button.iconButton.svelte-6g2o4b {
+    margin-top:3px;
+    margin-bottom:3px;
+}
+div:nth-child(1) > div:nth-child(1) > div:nth-child(1) button.iconButton:nth-child(1)::after {
+    content: "";
+}
+div:nth-child(1) > div:nth-child(1) > div:nth-child(1) button.iconButton:nth-child(3)::after {
+    content: "";
+}
+div:nth-child(1) > div:nth-child(1) > div:nth-child(1) button.iconButton:nth-child(4), div.panel button.iconButton:nth-child(7){
+    display: none;
+}
+div:nth-child(1) > div:nth-child(1) > div:nth-child(1) button.iconButton:nth-child(5)::after {
+    content: "";
+}
+div:nth-child(1) > div:nth-child(1) > div:nth-child(1) button.iconButton:nth-child(9)::after {
+    content: "";
+}
+div:nth-child(1) > div:nth-child(1) > div:nth-child(1) button.iconButton:nth-child(10)::after {
+    content: "";
+}
+div:nth-child(2) > div:nth-child(1) > div:nth-child(1) button.iconButton:nth-child(1)::after {
+    content: "";
+}
+div:nth-child(2) > div:nth-child(1) > div:nth-child(1) button.iconButton:nth-child(2)::after {
+    content: "";
+}
+div:nth-child(2) > div:nth-child(1) > div:nth-child(1) button.iconButton:nth-child(3)::after {
+    content: "";
+}
+div:nth-child(2) > div:nth-child(1) > div:nth-child(1) button.iconButton:nth-child(4)::after {
+    content: "";
+}
+div:nth-child(2) > div:nth-child(1) > div:nth-child(1) button.iconButton:nth-child(5)::after {
+    content: "";
+    color:rgb(255,90,90)
+}
+div.panel button.iconButton.svelte-6g2o4b:nth-child(5)::after {
+    content: "";
+    color:rgb(255,90,90)
+}
+div.panel div:nth-child(1) {
+    color: transparent;
+    position: relative;
+    margin-right: 5px;
+    transition: 150ms;
+    --transColor:transparent;
+    font-size:0px;
+    height: fit-content;
+}
+div.panel div:nth-child(1):hover {
+    --transColor:rgba(255,255,255,0.8);
+    font-size:13px;
+}
+div.panel div:nth-child(1)::after {
+    color: var(--transColor);
+    content: "Speed";
+    position: absolute;
+    top:0;
+    left: 5px;
+}
+div.panel button.iconButton:not(.svelte-6g2o4b):nth-child(3)::after {
+    content: "";
+}
+div.panel button.iconButton:not(.svelte-6g2o4b):nth-child(4)::after {
+    content: "";
+}
+div.panel button.iconButton:not(.svelte-6g2o4b):nth-child(6)::after {
+    content: "";
+}
+.panel span {
+    display:none;
+}
+div:nth-child(4) > p:nth-child(1) {
+    font-weight: 800;
+    font-style: italic;
+    font-size: 19px;
+}
+div:nth-child(4) > p:nth-child(1)::before {
+    font-weight: 400;
+    font-size: 13px;
+    font-style: normal;
+    content: "Status: ";
+    margin-right: 5px;;
+}
+div:nth-child(4) > p:nth-child(2) {
+    color:transparent;
+    font-size: 0px;
+}
+p.outputItem {
+    font-family: "Source Code Pro", monospace !important;
+    color:white;
+    user-select: all !important;
+}
+div:nth-child(1) > div:nth-child(1) > div:nth-child(5) {
+    background: black;
+    border-radius: 15px;
+    height: 100%;
+    margin-bottom: 35px;
+    margin-top:10px;
+    overflow-y: scroll;
+    padding: 15px !important;
+    padding-top:5px !important;
+}
+
+*::-webkit-scrollbar {
+    display: none;
+}
+main > div:nth-child(2) {
+    backdrop-filter: blur(5px);
+    opacity: 1 !important;
+    background: rgba(0,0,0,0.8) !important;
+    border-radius: 35px !important;
+}
+main > div:nth-child(3) > div:nth-child(1) > button:nth-child(5) {
+    display: none;
+}
+main > div:nth-child(3) > div:nth-child(1) > button:nth-child(6) {
+    padding: 5px;
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    background:rgb(170,170,170);
+    cursor: pointer;
+    transition: 150ms;
+}
+main > div:nth-child(3) > div:nth-child(1) > button:nth-child(6):active {
+    background:rgb(140,140,140);
+}
+main > div:nth-child(1) > div:nth-child(1) {
+    margin-right: 0 !important;
+    width: calc(100vw - 30px);
+}
+main > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) {
+    display: flex;
+    justify-content: center;
+}
+main > div:nth-child(3) > div:nth-child(1) {
+    border-radius: 10px;
+    border:none !important;
+    text-align: center;
+    padding-top: 5px !important;
+}
+main > div:nth-child(3) > div:nth-child(1) p:nth-child(1) {
+    display: none;
+}
+main > div:nth-child(3) > div:nth-child(1) p:nth-child(3),  main > div:nth-child(3) > div:nth-child(1) p:nth-child(4){
+    font-size: 0;
+    float: left;
+    margin-bottom: 5px;
+    width: 50%;
+}
+main > div:nth-child(3) > div:nth-child(1) p:nth-child(3) input,  main > div:nth-child(3) > div:nth-child(1) p:nth-child(4) input {
+    width: 100%;
+    border:none;
+    outline: transparent;
+    font-size: 19px;
+    font-family: inherit;
+}
+main > div:nth-child(3) > div:nth-child(1) p:nth-child(3) input {
+    text-align: right;
+}
+.iconButton.svelte-6g2o4b {
+    padding-top:4px !important;
+}
+.iconButton.svelte-6g2o4b.highlightButton {
+    position: relative;
+}
+#input[type=file] {
+    color:transparent;
+    background: transparent;
+}
+main > div:nth-child(3) > div:nth-child(1) > div:nth-child(3) {
+    display: none !important;
+}
+.iconButton.svelte-6g2o4b.highlightButton::before {
+    aspect-ratio: 1;
+    width: 100%;
+    background:rgba(255,255,255,0.1);
+    position: absolute;
+    top:0;
+    left: 0;
+    content: "";
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    backdrop-filter: brightness(0.8);
+}

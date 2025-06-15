@@ -1,0 +1,242 @@
+[
+    {
+        "label": "kara.move",
+        "kind": "monaco.languages.CompletionItemKind.Function",
+        "insertText": "kara.move()",
+        "detail": "Step forwards"
+    },
+    {
+        "label": "kkara.turnLeft",
+        "kind": "monaco.languages.CompletionItemKind.Function",
+        "insertText": "kara.turnLeft()",
+        "detail": "90deg rotation left"
+    },
+    {
+        "label": "kara.turnRight",
+        "kind": "monaco.languages.CompletionItemKind.Function",
+        "insertText": "kara.turnRight()",
+        "detail": "90deg rotation right"
+    },
+    {
+        "label": "kara.putLeaf",
+        "kind": "monaco.languages.CompletionItemKind.Function",
+        "insertText": "kara.putLeaf()",
+        "detail": "Place a leaf on the current tile"
+    },
+    {
+        "label": "kara.removeLeaf",
+        "kind": "monaco.languages.CompletionItemKind.Function",
+        "insertText": "kara.removeLeaf()",
+        "detail": "Remove a leaf from the current tile"
+    },
+    {
+        "label": "kara.onLeaf",
+        "kind": "monaco.languages.CompletionItemKind.Variable",
+        "insertText": "kara.onLeaf()",
+        "detail": "Check if Kara is on a leaf"
+    },
+    {
+        "label": "kara.treeFront",
+        "kind": "monaco.languages.CompletionItemKind.Variable",
+        "insertText": "kara.treeFront()",
+        "detail": "Check if there is a tree in front"
+    },
+    {
+        "label": "kara.treeLeft",
+        "kind": "monaco.languages.CompletionItemKind.Variable",
+        "insertText": "kara.treeLeft()",
+        "detail": "Check if there is a tree to the left"
+    },
+    {
+        "label": "kara.treeRight",
+        "kind": "monaco.languages.CompletionItemKind.Variable",
+        "insertText": "kara.treeRight()",
+        "detail": "Check if there is a tree to the right"
+    },
+    {
+        "label": "kara.mushroomFront",
+        "kind": "monaco.languages.CompletionItemKind.Variable",
+        "insertText": "kara.mushroomFront()",
+        "detail": "Check if there is a mushroom in front"
+    },
+    {
+        "label": "kara.moveMushroom",
+        "kind": "monaco.languages.CompletionItemKind.Function",
+        "insertText": "kara.moveMushroom()",
+        "detail": "Push the mushroom in front"
+    },
+    {
+        "label": "kara.setPosition",
+        "kind": "monaco.languages.CompletionItemKind.Function",
+        "insertText": "kara.setPosition(x, y)",
+        "detail": "Move kara to a set position"
+    },
+    {
+        "label": "world.clearAll",
+        "kind": "monaco.languages.CompletionItemKind.Function",
+        "insertText": "world.clearAll()",
+        "detail": "Remove all elements"
+    },
+    {
+        "label": "world.setLeaf",
+        "kind": "monaco.languages.CompletionItemKind.Function",
+        "insertText": "world.setLeaf(x, y, putLeaf)",
+        "detail": "Place or remove a leaf at (x, y)"
+    },
+    {
+        "label": "world.setTree",
+        "kind": "monaco.languages.CompletionItemKind.Function",
+        "insertText": "world.setTree(x, y, putTree)",
+        "detail": "Place or remove a tree at (x, y)"
+    },
+    {
+        "label": "world.setMushroom",
+        "kind": "monaco.languages.CompletionItemKind.Function",
+        "insertText": "world.setMushroom(x, y, putMushroom)",
+        "detail": "Place or remove a mushroom at (x, y)"
+    },
+    {
+        "label": "world.setSize",
+        "kind": "monaco.languages.CompletionItemKind.Function",
+        "insertText": "world.setSize(newSizeX, newSizeY)",
+        "detail": "Change the size of the world"
+    },
+    {
+        "label": "world.isEmpty",
+        "kind": "monaco.languages.CompletionItemKind.Function",
+        "insertText": "world.isEmpty(x, y)",
+        "detail": "Is the cell at (x, y) empty?"
+    },
+    {
+        "label": "world.isTree",
+        "kind": "monaco.languages.CompletionItemKind.Function",
+        "insertText": "world.isTree(x, y)",
+        "detail": "Is there a tree at (x, y)?"
+    },
+    {
+        "label": "world.isMushroom",
+        "kind": "monaco.languages.CompletionItemKind.Function",
+        "insertText": "world.isMushroom(x, y)",
+        "detail": "Is there a mushroom at (x, y)?"
+    },
+    {
+        "label": "world.isLeaf",
+        "kind": "monaco.languages.CompletionItemKind.Function",
+        "insertText": "world.isLeaf(x, y)",
+        "detail": "Is there a leaf at (x, y)?"
+    },
+    {
+        "label": "world.getSizeX",
+        "kind": "monaco.languages.CompletionItemKind.Function",
+        "insertText": "world.getSizeX()",
+        "detail": "Get the horizontal size of the world"
+    },
+    {
+        "label": "world.getSizeY",
+        "kind": "monaco.languages.CompletionItemKind.Function",
+        "insertText": "world.getSizeY()",
+        "detail": "Get the vertical size of the world"
+    },
+    {
+        "label": "tools.println",
+        "kind": "monaco.languages.CompletionItemKind.Function",
+        "insertText": "tools.println(string)",
+        "detail": "Write string to standard output"
+    },
+    {
+        "label": "tools.showMessage",
+        "kind": "monaco.languages.CompletionItemKind.Function",
+        "insertText": "tools.showMessage(message)",
+        "detail": "Show string in a dialog window"
+    },
+    {
+        "label": "tools.random",
+        "kind": "monaco.languages.CompletionItemKind.Function",
+        "insertText": "tools.random(bound)",
+        "detail": "Return random number in [0..bound]"
+    },
+    {
+        "label": "tools.checkState",
+        "kind": "monaco.languages.CompletionItemKind.Function",
+        "insertText": "tools.checkState()",
+        "detail": "Check the speed controller"
+    },
+    {
+        "label": "tools.sleep",
+        "kind": "monaco.languages.CompletionItemKind.Function",
+        "insertText": "tools.sleep(ms)",
+        "detail": "Sleep for ms milliseconds"
+    },
+    {
+        "label": "tools.stringInput",
+        "kind": "monaco.languages.CompletionItemKind.Function",
+        "insertText": "tools.stringInput(title)",
+        "detail": "Input string in a dialog window with title; returns null if canceled"
+    },
+    {
+        "label": "tools.intInput",
+        "kind": "monaco.languages.CompletionItemKind.Function",
+        "insertText": "tools.intInput(title)",
+        "detail": "Input integer in a dialog window with title; returns Integer.MIN_VALUE if canceled or invalid"
+    },
+    {
+        "label": "tools.doubleInput",
+        "kind": "monaco.languages.CompletionItemKind.Function",
+        "insertText": "tools.doubleInput(title)",
+        "detail": "Input floating-point number in a dialog window with title; returns Double.MIN_VALUE if canceled or invalid"
+    },
+    {
+        "label": "for i in range (int)",
+        "kind": "monaco.languages.CompletionItemKind.Keyword",
+        "insertText": "for i in range (3)",
+        "detail": ""
+    },
+    {
+        "label": "for",
+        "kind": "monaco.languages.CompletionItemKind.Keyword",
+        "insertText": "for ",
+        "detail": ""
+    },
+    {
+        "label": "while",
+        "kind": "monaco.languages.CompletionItemKind.Keyword",
+        "insertText": "while ",
+        "detail": ""
+    },
+    {
+        "label": "def",
+        "kind": "monaco.languages.CompletionItemKind.Keyword",
+        "insertText": "def ",
+        "detail": ""
+    },
+    {
+        "label": "not",
+        "kind": "monaco.languages.CompletionItemKind.Keyword",
+        "insertText": "not ",
+        "detail": ""
+    },
+    {
+        "label": "if",
+        "kind": "monaco.languages.CompletionItemKind.Keyword",
+        "insertText": "if ",
+        "detail": ""
+    },
+    {
+        "label": "else",
+        "kind": "monaco.languages.CompletionItemKind.Keyword",
+        "insertText": "else:",
+        "detail": ""
+    },
+    {
+        "label": "elif",
+        "kind": "monaco.languages.CompletionItemKind.Keyword",
+        "insertText": "elif ",
+        "detail": ""
+    },
+    {
+        "label": "#",
+        "kind": "monaco.languages.CompletionItemKind.Keyword",
+        "insertText": "# ",
+        "detail": "Add a comment"
+    }
+]

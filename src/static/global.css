@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Khula:wght@300;400;600;700;800&display=swap');
+body {
+    padding: 0;
+    margin: 0;
+    background:#1e1e1e;
+    font-family: "Arial", "Khula",sans-serif;
+}
+* {
+    scrollbar-width: none;
+    user-select: none;
+}
+.content {
+    display:flex;
+    width: 100vw;
+    height: 100vh;
+    align-items: center;
+}
+.preview, .editor {
+    width: calc(50% - 1px);
+    height: 100vh;
+    display:flex;
+    flex-direction: column;
+    border-radius: 15px;
+}
+.dif-indc {
+    border: 2px solid rgb(55,55,55);
+    height: calc(100% - 75px);
+    border-radius: 5px;
+    width: 0;
+}
+#textarea {
+    height: calc(100% - 55px);
+    width: 100%;
+    padding-top:15px;
+}
+.preview iframe {
+    border-radius: 15px;
+    margin: 10px;
+    height: 100%;
+    width: calc(100% - 30px);
+    border:none;
+}
+.tools {
+    height: 25px;
+    display: flex;
+    width: calc(100% - 10px);
+    justify-content: end;
+    align-items: center;
+    font-size: 15px;
+    margin-top: 10px;
+}
+.tool {
+    color: white;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding: 2px 10px;
+    border-radius: 5px;
+    color: rgba(255,255,255,0.6);
+}
+i.tool {
+    padding:5px;
+}
+.tool input {
+    color:inherit;
+    background:transparent;
+    border:none;
+    font-size:inherit;
+    outline: transparent;
+    max-width: 100% !important;
+}
+.tool:hover, .tool:focus-within {
+    background: rgba(255,255,255,0.1);
+}
+.documentation,.generative-outer {
+    z-index: 9;
+    position: fixed;
+    top:0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    backdrop-filter: blur(10px) grayscale(0.8);
+    align-items: center;
+    justify-content: center;
+    background: rgba(255,255,255,0.04);
+    padding-top:50px;
+    opacity: 0;
+    display: none;
+    cursor: pointer;
+    transition: 250ms;
+}
+.documentation iframe, .generative-window {
+    background:#1e1e1e;
+    border:1px rgba(255,255,255,0.1) solid;
+    border-radius: 15px;
+    width: calc(100vw - 50px);
+    max-width: 700px;
+    height: 600px;
+    cursor: default;
+    box-shadow: 0 0 20px 0 rgba(0,0,0,0.5);
+}
+.generative-window {
+    max-width: 500px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.generative-window span,.generative-outer p {
+    font-family: "Noto Sans", "Arial",sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    color:white;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top:20px;
+}
+.generative-outer b {
+    font-weight: 300;
+    color:rgb(255,60,60);
+    font-size: 13px;
+    margin-bottom: 20px;
+    margin-left: 25px;
+    opacity: 0;
+}
+.generative-outer p {
+    font-weight: 500;
+    font-size: 12px;
+    color:rgb(200,200,200);
+    margin-bottom:25px;
+    margin-top:0;
+}
+div.bot-input {
+    width: calc(100% - 50px);
+    display:flex;
+    margin-left: auto;
+    margin-right: auto;
+    background:rgb(50,50,50);
+    border:rgb(90,90,90) 1px solid;
+    border-radius: 5px;
+    font-size: 16px;
+    font-family: "Noto Sans",sans-serif;
+    color:white;
+    align-items: center;
+}
+div.bot-input input {
+    outline: transparent;
+    width: 100%;
+    padding: 7px 12.5px;
+    background:transparent;
+    border:none;
+    color:inherit;
+    font-family: inherit;
+    font-size: inherit;
+}
+div.bot-input input::placeholder {
+    color:rgb(200,200,200)
+}
+div.bot-input i {
+    width: 30px;
+    aspect-ratio: 1;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-right: 3px;
+}
+div.bot-input i:hover {
+    background:rgba(255,255,255,0.2)
+}
+div.bot-input:focus-within {
+    border-color: rgb(120,120,120);
+}

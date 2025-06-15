@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <span class="headline">Documentation</span>
+    <span class="h2">Commands</span>
+    Here's a list with all commands:
+    <table><tbody id="commands-table-body"></tbody></table>
+    <span class="h2">PythonKara Debug</span>
+    <span>Debug scripts from helbecker.de; Design finished with icons of <a target="_blank" href="https://fontawesome.com/">fontawesome</a></span>
+    <span class="h2">Other Documentations</span>
+    <a target="_blank" href="https://ddi.ifi.lmu.de/tdi/2018/PythonKara/PythonKara%20Arbeitsblatt_L.pdf/at_download/file">LMU Munich</a>
+    <script>
+        const tableBody = document.getElementById("commands-table-body");
+        fetch("../syntax.json")
+        .then(res => res.json())
+        .then(res => {
+            tableBody.innerHTML = "";
+            res.forEach(cmd => {
+                if(cmd.kind == "monaco.languages.CompletionItemKind.Keyword") return
+                tableBody.innerHTML += `
+                    <tr>
+                        <td><span class="code">${cmd.insertText}</span></td>
+                        <td>${cmd.detail}<i class="fa-solid fa-circle-info" title="${cmd.kind}"></i></td>
+                    </tr>
+                `;
+            });
+        })
+        .catch(error => {
+            console.error(error.message);
+            tableBody.innerHTML = `<tr><td colspan="2"><i>Couldn't load this content</i></td></tr>`;
+        });
+    </script>
+</body>
+</html>
