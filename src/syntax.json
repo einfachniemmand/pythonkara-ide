@@ -250,5 +250,132 @@
         "kind": "monaco.languages.CompletionItemKind.Keyword",
         "insertText": "False",
         "detail": ""
+    },
+    {
+        "label": "print",
+        "kind": "monaco.languages.CompletionItemKind.Function",
+        "insertText": "print()",
+        "detail": "Prints a text to the console."
+    },
+    {
+        "label": "break",
+        "kind": "monaco.languages.CompletionItemKind.Keyword",
+        "insertText": "break",
+        "detail": "Interrupts a function"
+    },
+    {
+        "label": "continue",
+        "kind": "monaco.languages.CompletionItemKind.Keyword",
+        "insertText": "continue",
+        "detail": "Skips to the next iteration of a loop"
+    },
+    {
+        "label": "pass",
+        "kind": "monaco.languages.CompletionItemKind.Keyword",
+        "insertText": "pass",
+        "detail": "Does nothing"
+    },
+    {
+        "label": "return",
+        "kind": "monaco.languages.CompletionItemKind.Keyword",
+        "insertText": "return ",
+        "detail": "Returns a value from a function"
+    },
+    {
+        "label": "import",
+        "kind": "monaco.languages.CompletionItemKind.Keyword",
+        "insertText": "import ",
+        "detail": "Imports a module"
+    },
+    {
+        "label": "from",
+        "kind": "monaco.languages.CompletionItemKind.Keyword",
+        "insertText": "from ",
+        "detail": "Imports specific parts of a module"
+    },
+    {
+        "label": "as",
+        "kind": "monaco.languages.CompletionItemKind.Keyword",
+        "insertText": "as ",
+        "detail": "Alias for imports"
+    },
+    {
+        "label": "class",
+        "kind": "monaco.languages.CompletionItemKind.Keyword",
+        "insertText": "class ",
+        "detail": "Defines a class"
+    },
+    {
+        "label": "try",
+        "kind": "monaco.languages.CompletionItemKind.Keyword",
+        "insertText": "try:",
+        "detail": "Start a try block"
+    },
+    {
+        "label": "except",
+        "kind": "monaco.languages.CompletionItemKind.Keyword",
+        "insertText": "except:",
+        "detail": "Handle exceptions"
+    },
+    {
+        "label": "finally",
+        "kind": "monaco.languages.CompletionItemKind.Keyword",
+        "insertText": "finally:",
+        "detail": "Always execute after try/except"
+    },
+    {
+        "label": "with",
+        "kind": "monaco.languages.CompletionItemKind.Keyword",
+        "insertText": "with ",
+        "detail": "Context manager"
+    },
+    {
+        "label": "lambda",
+        "kind": "monaco.languages.CompletionItemKind.Keyword",
+        "insertText": "lambda ",
+        "detail": "Anonymous function"
+    },
+    {
+        "label": "global",
+        "kind": "monaco.languages.CompletionItemKind.Keyword",
+        "insertText": "global ",
+        "detail": "Declare global variable"
+    },
+    {
+        "label": "nonlocal",
+        "kind": "monaco.languages.CompletionItemKind.Keyword",
+        "insertText": "nonlocal ",
+        "detail": "Declare nonlocal variable"
+    },
+    {
+        "label": "None",
+        "kind": "monaco.languages.CompletionItemKind.Keyword",
+        "insertText": "None",
+        "detail": "Null value"
+    },
+    {
+        "label": "and",
+        "kind": "monaco.languages.CompletionItemKind.Keyword",
+        "insertText": "and ",
+        "detail": "Logical AND"
+    },
+    {
+        "label": "or",
+        "kind": "monaco.languages.CompletionItemKind.Keyword",
+        "insertText": "or ",
+        "detail": "Logical OR"
+    },
+    {
+        "label": "is",
+        "kind": "monaco.languages.CompletionItemKind.Keyword",
+        "insertText": "is ",
+        "detail": "Identity comparison"
+    },
+    {
+        "label": "in",
+        "kind": "monaco.languages.CompletionItemKind.Keyword",
+        "insertText": "in ",
+        "detail": "Membership test"
     }
+    
 ]
