@@ -33,6 +33,7 @@ require(['vs/editor/editor.main'], function () {
                     { token: 'custom-object' },
                     { token: '', next: '@kara_method' }
                 ]],
+                [/\b(debug)\b\s*;/, 'debug-statement'],
                 [/\b(def|class|if|elif|else|while|for|in|try|except|finally|with|as|return|import|from|pass|break|continue|and|or|not|is|lambda|yield|assert|del|global|nonlocal|raise|True|False|None)\b/, 'keyword'],
                 [/\b(print|len|range|str|int|float|list|dict|set|tuple|open|input|type|super|self)\b/, 'type.identifier'],
                 [/[a-zA-Z_]\w*(?=\s*=)/, 'var-init'],
@@ -78,12 +79,13 @@ require(['vs/editor/editor.main'], function () {
         rules: [
             { token: 'custom-object', foreground: '4EC9B0' },
             { token: 'custom-method', foreground: '00BFFF' },
-            { token: 'var-init', foreground: '9CDCFE' }
+            { token: 'var-init', foreground: '9CDCFE' },
+            { token: 'debug-statement', foreground: 'FF0000' }
         ],
         colors: {}
     });
     monaco.editor.create(document.getElementById('textarea'), {
-        value: localStorage.getItem("pykara_script") ? localStorage.getItem("pykara_script") : '# Happy coding :)',
+        value: localStorage.getItem("pykara_script") ? localStorage.getItem("pykara_script") : '# Happy coding :)\n# Bonus Tip: Use debug; for breakpoints \n# Learn more at ' + location.protocol + "//" + location.host + "/docs/",
         language: 'python',
         theme: 'kara-theme',
         automaticLayout: true
