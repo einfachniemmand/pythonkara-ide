@@ -13,5 +13,6 @@ function convertToWritable (input) {
 }
 setInterval(()=>{
     document.querySelector(".cm-content").innerHTML = localStorage.getItem('pykara_script') ?  convertToWritable(localStorage.getItem('pykara_script')) : "";
-    document.querySelector("main > div:nth-child(1) > div:nth-child(1) > div:nth-child(3) > div:nth-child(1) > div:nth-child(1) > input:nth-child(2)").max = 10.5;
+    document.querySelector("main > div:nth-child(1) > div:nth-child(1) > div:nth-child(3) > div:nth-child(1) > div:nth-child(1) > input:nth-child(2)").max = 13.5;
+    document.querySelector("html body main div div div svg").oncontextmenu = ()=>{ return false };
 },300)
