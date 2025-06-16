@@ -5,8 +5,8 @@ function convertToWritable (input) {
         if(!cm.startsWith("debug;")){
             output+= `<div class='cm-line'><span class='cm'>${cm}</span></div>`
         }else{
-            document.querySelector(".cm-breakpoint-gutter").dispatchEvent(new MouseEvent("mousedown",{bubbles:true,clientX:0,clientY:55+(16.9*line),button:0}))
             output+= `<div class='cm-line'><span class='cm'>print("<span style='color:orange'>Breakpoint at line ${line+1}</span>")</span></div>`
+            document.querySelector(".cm-breakpoint-gutter").dispatchEvent(new MouseEvent("mousedown",{bubbles:true,clientX:0,clientY:55+(16.9*(line-1)),button:0}))
         }
     })
     return output
