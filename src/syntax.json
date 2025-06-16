@@ -376,6 +376,11 @@
         "kind": "monaco.languages.CompletionItemKind.Keyword",
         "insertText": "in ",
         "detail": "Membership test"
+    },
+    {
+        "label": "debug",
+        "kind": "monaco.languages.CompletionItemKind.Keyword",
+        "insertText": "debug;",
+        "detail": "Breakpoint (web-only)"
     }
-    
 ]
