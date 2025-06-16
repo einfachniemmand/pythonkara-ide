@@ -1,41 +1,91 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-</head>
-<body>
-    <span class="headline">Documentation</span>
-    <span class="h2">Commands</span>
-    Here's a list with all commands:
-    <table><tbody id="commands-table-body"></tbody></table>
-    <span>Use <span class="code">debug;</span> as a breakpoint</span>
-    <span class="h2">PythonKara Debug</span>
-    <span>Debug scripts from helbecker.de; Design finished with icons of <a target="_blank" href="https://fontawesome.com/">fontawesome</a></span>
-    <span class="h2">Other Documentations</span>
-    <a target="_blank" href="https://ddi.ifi.lmu.de/tdi/2018/PythonKara/PythonKara%20Arbeitsblatt_L.pdf/at_download/file">LMU Munich</a>
-    <script>
-        const tableBody = document.getElementById("commands-table-body");
-        fetch("../syntax.json")
-        .then(res => res.json())
-        .then(res => {
-            tableBody.innerHTML = "";
-            res.forEach(cmd => {
-                if(cmd.kind == "monaco.languages.CompletionItemKind.Keyword") return
-                tableBody.innerHTML += `
-                    <tr>
-                        <td><span class="code">${cmd.insertText}</span></td>
-                        <td>${cmd.detail}<i class="fa-solid fa-circle-info" title="${cmd.kind}"></i></td>
-                    </tr>
-                `;
-            });
-        })
-        .catch(error => {
-            console.error(error.message);
-            tableBody.innerHTML = `<tr><td colspan="2"><i>Couldn't load this content</i></td></tr>`;
-        });
-    </script>
-</body>
+<html>
+    <head>
+        <title>PythonKara Online</title>
+        <link rel="icon" href="media/icon.svg">
+        <link rel="stylesheet" href="static/global.css">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=500, initial-scale=1">
+        <script src="static/main.js"></script>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    </head>
+    <body>
+        <style>
+            .loading {
+                position: fixed;
+                z-index: 100;
+                width: 100vw;
+                height: 100vh;
+                background:#1e1e1e;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                transition: 150ms;
+                opacity: 1; 
+            }
+            .loading img {
+                border-radius: 15px;
+            }
+            .loading span {
+                color:rgb(100,100,100);
+                font-family: "Arial","Helvetica",sans-serif;
+                margin-top:25px;
+            }
+            .loader {
+                margin-top:50px;
+                width: 45px;
+                aspect-ratio: .75;
+                --c: no-repeat linear-gradient(rgb(150,150,150) 0 0);
+                background: 
+                    var(--c) 0%   50%,
+                    var(--c) 50%  50%,
+                    var(--c) 100% 50%;
+                animation: l7 1s infinite linear alternate;
+            }
+            @keyframes l7 {
+                0%  {background-size: 20% 50% ,20% 50% ,20% 50% }
+                20% {background-size: 20% 20% ,20% 50% ,20% 50% }
+                40% {background-size: 20% 100%,20% 20% ,20% 50% }
+                60% {background-size: 20% 50% ,20% 100%,20% 20% }
+                80% {background-size: 20% 50% ,20% 50% ,20% 100%}
+                100%{background-size: 20% 50% ,20% 50% ,20% 50% }
+            }
+        </style>
+        <div class="loading">
+            <img src="media/logo.png" draggable="false">
+            <span>Why do devs use dark mode? Cause light attracts Kara <i>cough</i> bugs!</span>
+            <div class="loader"></div>
+        </div>
+        <div class="content">
+            <div class="preview">
+                <iframe src="kara.html"></iframe>
+            </div>
+            <div class="dif-indc"></div>
+            <div class="editor">
+                <div class="tools">
+                    <div class="tool"><input placeholder="kara.py" class="file-name" type="text" value="kara.py" style="width: auto;" size="4" oninput="this.size = this.value.length > 6 ? this.value.length-3 : 4;" maxlength="32"></div>
+                    <div class="tool" onclick="downloadContent()">Download</div>
+                    <div class="tool" onclick="openGenerator()">Generative Model</div>
+                    <div class="tool" onclick="loadDocs()">Docs</div>
+                    <i class="fa-brands fa-github tool" title="github/einfachniemmand" onclick="window.open('https://github.com/einfachniemmand/pythonkara-ide')"></i>
+                </div>
+                <div id="textarea"></div>
+            </div>
+        </div>
+        <div class="documentation" onclick="if(event.target==this){closeDocs()}"><iframe src="docs/"></iframe></div>
+        <div class="generative-outer" onclick="if(event.target==this){closeGenerator()}">
+            <div class="generative-window">
+                <span>Generate Code</span><p>Generate PythonKara code automatically using AI</p>
+                <div class="bot-input">
+                    <input class="bot-input" id="bi" type="text" maxlength="128" placeholder="Program that kara spins forever!"></input>
+                    <label for="bi" onclick="generateIdea()"><i class="fa-solid fa-paper-plane"></i></label>
+                </div>
+                <b>Try again with another prompt</b>
+            </div>
+        </div>
+        <script src="https://unpkg.com/monaco-editor@latest/min/vs/loader.js"></script>
+        <script src="static/export.js"></script>
+        <script src="static/editor.js"></script>
+    </body>
 </html>
